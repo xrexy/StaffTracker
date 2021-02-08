@@ -1,0 +1,36 @@
+name: StaffTracker
+version: ${project.version}
+main: me.xrexy.stafftracker.StaffTracker
+prefix: ST
+softdepend: [ Essentials ]
+authors: [ xrexy ]
+description: Track true staff playtime
+
+commands:
+  "stafftracker":
+    description: Main command of StaffTracker
+    usage: /<command>
+    aliases:
+      - st
+
+permissions:
+  stafftracker.check:
+    description: Check staff's playtime
+    default: op
+  stafftracker.date:
+    description: Check information from specific date
+    default: op
+  stafftracker.today:
+    description: Check today's information
+    default: op
+  stafftracker.yesterday:
+    description: Check yesterday's information
+    default: op
+
+  stafftracker.use:
+    description: Player can see help menu
+    default: op
+
+  stafftracker.checkable:
+    description: Track player's playtime
+    default: op

@@ -1,0 +1,47 @@
+debug: true
+day-check-interval: 600 #seconds
+prefix: "&8[&aStaffTracker&8]"
+
+messages:
+  check:
+    - " "
+    - "  &8[ &e%player% &8]"
+    - " "
+    - " &f>> &aPlaytime: &7%playtime%"
+    - " "
+    - " &f>> &aTotal seconds: &c%seconds_total%"
+    - " &f>> &aTotal minutes: &c%minutes_total%"
+    - " &f>> &aTotal hours: &c%hours_total%"
+    - " &f>> &aTotal days: &c%days_total%"
+  help:
+    - " "
+    - "   &8[&aStaffTracker&8]"
+    - " "
+    - " &f>> &a/stafftracker date &e<DD-Mm-YYYY>"
+    - " &f>> &a/stafftracker check &e<player>"
+    - " &f>> &a/stafftracker yesterday"
+    - " &f>> &a/stafftracker today"
+  files:
+    messages:
+      - "  &7Showing information for date: &f%wanted%&7..."
+      - "&r" # player-parse will loop under this line for all player's for the corresponding date
+    player-format: " &f>> &a%player% &7: &e%playtime% %afk%"
+    no-file: "%prefix% &cThere is no file for date &e%wanted%&c! &7(Current date is: &f%current%&7)"
+    no-information: "&7There is no information to load! :("
+
+  afk:
+    true: "&7(AFK)"
+    false: ""
+  no-permission: "%prefix% &cYou do not have enough permissions to use this command"
+  invalid-player: "%prefix% &cInvalid player"
+  no-player: "%prefix% &cPlease enter a player name"
+  invalid-args: "%prefix% &cInvalid arguments, please try again"
+  missing-args: "%prefix% &cThere are too little arguments, please check the format again"
+  missing-permission: "%prefix% &cPlayer doesn't have permission &7\"stafftracker.checkable\""
+
+units:
+  second: s
+  minute: m
+  hour: h
+  day: d
+  split: ", "
